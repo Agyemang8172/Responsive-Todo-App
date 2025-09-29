@@ -28,7 +28,7 @@ function App() {
   const handleToggleComplete = (id) => {
     setTodos((prevTodos)=>
       prevTodos.map((todo)=>
-         todo.id === id ? {...todo,completed: !todo.complete} : todo)
+         todo.id === id ? {...todo, completed: !todo.completed} : todo)
     )
   }
 
@@ -36,7 +36,7 @@ function App() {
   const handleRemoveTodo = (id) => {
     setTodos((prevTodos)=>
      prevTodos.filter((todo)=>
-      id !== todo.id
+      todo.id !== id
     ))
   }
   return (

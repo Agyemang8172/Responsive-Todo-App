@@ -12,18 +12,18 @@ const TodoForm = ({ onAddTodo }) => {
 
     }
   return (
-     <form onSubmit={ handleSubmit }  className='flex gap-2'>
+     <form onSubmit={handleSubmit}  className='flex gap-2'>
         <input 
             type='text'
             value={inputValue}
              onChange={(e) => setInputValue(e.target.value)}
-             placeholder='Add a new todolist'
-             className=''
+             placeholder='Add a new todo'
+             className=' border px-6 py-3 rounded-md'
 
         />
         <button
           type='submit'
-          className=' p-6 bg-blue-500 text-white'
+          className='  px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors'
         >
           Add Todo
         </button>

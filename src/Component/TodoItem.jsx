@@ -2,7 +2,7 @@ import React from 'react'
 
 const TodoItem = ({ todo, onToggleComplete, onRemoveTodo  } ) => {
   return (
-    <li className='flex items-center justify-between p-4'>
+    <li className='flex items-center space-y-2.5 p-4'>
         <span  className={`flex-1 ${todo.completed ? 'text-gray-400 line-through' : 'text-gray-700'}`}>
             {todo.text}
         </span>
