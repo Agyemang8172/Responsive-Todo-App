@@ -1,0 +1,29 @@
+import React from 'react'
+
+const TodoItem = ({ todo, onToggleComplete, onRemoveTodo  } ) => {
+  return (
+    <li className='flex items-center justify-between p-4'>
+        <span  className={`flex-1 ${todo.completed ? 'text-gray-400 line-through' : 'text-gray-700'}`}>
+            {todo.text}
+        </span>
+
+
+        <div className='flex gap-2'>
+            <button
+             onClick={() => onToggleComplete(todo.id)}
+             className={`px-3 py-1 rounded-md text-white transition-colors ${todo.completed ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-green-500  hover:bg-green-600'}`}
+            >
+               {todo.completed ? 'Undo' : 'Complete'}
+            </button>
+            <button
+              onClick={() => onRemoveTodo(todo.id)}
+              className='px-3 py-1 bg-red-500  text-white rounded-md hover:bg-red-600 transition-colors'
+            >
+                Remove
+            </button>
+        </div>
+    </li>
+  )
+}
+
+export default TodoItem
